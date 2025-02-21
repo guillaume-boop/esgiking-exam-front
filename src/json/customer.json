@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "65d1234567890abcdef10001",
+    "user": "65d1234567890abcdef00001",
+    "orders": [],
+    "session": "65d1234567890abcdef20001"
+  },
+  {
+    "_id": "65d1234567890abcdef10002",
+    "user": "65d1234567890abcdef00002",
+    "orders": [],
+    "session": "65d1234567890abcdef20002"
+  },
+  {
+    "_id": "65d1234567890abcdef10003",
+    "user": "65d1234567890abcdef00003",
+    "orders": [],
+    "session": "65d1234567890abcdef20003"
+  }
+]

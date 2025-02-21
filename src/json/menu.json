@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "65d1234567890abcdef02001",
+    "name": "Petit Menu",
+    "description": "Un menu avec un petit burger, des petites frites et une boisson de 25cl.",
+    "products": []
+  },
+  {
+    "_id": "65d1234567890abcdef02002",
+    "name": "Moyen Menu",
+    "description": "Un burger moyen avec frites et boisson de 40cl.",
+    "products": []
+  },
+  {
+    "_id": "65d1234567890abcdef02003",
+    "name": "Maxi Menu ",
+    "description": "Un burger géchar, des doubles frites et une boisson de 50cl.",
+    "products": []
+  }
+]

@@ -1,0 +1,557 @@
+#root {
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ====================================================================================================== */
+/* Slidebar */
+/* ====================================================================================================== */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 8rem;
+  height: 100vh; 
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  height: 60vh;  
+  text-align: center;
+  margin-top: 7vh;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  font-size: 7vh;
+  border-top: #535353 1px solid;
+  border-bottom: #535353 1px solid;
+}
+
+
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 10vh;
+}
+
+.bar-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.bar-image {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 50px;
+}
+
+/* ====================================================================================================== */
+/* Contenu a droite */
+/* ====================================================================================================== */
+.content{
+  margin-left: 11rem;
+  padding: 20px;
+  margin-top: 0;
+  height: 100vh;
+}
+
+
+/* Conteneur pour les cartes */
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+  gap: 25px; /* Espacement entre les cartes */
+  list-style: none;
+  padding: 0;
+}
+
+/* Style pour chaque carte */
+.product-card {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  border: 15px groove #b01b1b;
+}
+
+/* Style pour l'image */
+.product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px; /* Espacement entre l'image et le texte */
+ 
+}
+
+/* Style pour le nom du produit */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Style pour le prix */
+.product-price {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* ====================================================================================================== */
+/* Modal Product */
+/* ====================================================================================================== */
+
+/* Overlay avec animation */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out forwards;
+  transition: opacity 0.3s ease-out;
+}
+
+.modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Modal content */
+.modal-content {
+  background: rgb(87, 6, 6);
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.modal-exit {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+
+/* Empêcher le scroll quand le modal est ouvert */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.modal-add-to-cart {
+  background-color: #ffa600;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 12px;
+  
+}
+
+.modal-close {
+  background-color: #fff;
+  color: #b01b1b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 12px;
+}
+
+.modal-price {
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* ====================================================================================================== */
+/* Modal Connexion */
+/* ====================================================================================================== */
+
+/* Styles pour le bouton "Connecter" */
+.connect-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #ffa600;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+/* Overlay avec animation */
+.connect-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out forwards;
+  transition: opacity 0.3s ease-out;
+}
+
+.connect-modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Modal content */
+.connect-modal-content {
+  background: rgb(87, 6, 6); /* Fond rouge foncé */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  animation: slideInReverse 0.3s ease-out forwards;
+}
+
+.connect-modal-exit {
+  animation: slideOut 0.3s ease-in forwards;
+}
+
+/* Empêcher le scroll quand le modal est ouvert */
+body.connect-modal-open {
+  overflow: hidden;
+}
+
+/* Bouton de fermeture */
+.connect-modal-close {
+  background-color: #fff;
+  color: #b01b1b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 12px;
+  border: none;
+}
+
+/* Champ d'entrée */
+.connect-modal-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Bouton de validation */
+.connect-modal-submit {
+  background-color: #ffa600; /* Orange vif */
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 12px;
+  border: none;
+}
+
+.connect-modal-submit:hover {
+  background-color: #e69500; /* Orange plus foncé au survol */
+}
+
+/* Message d'erreur */
+.connect-error-message {
+  color: #fff; /* Texte blanc */
+  margin: 10px 0;
+  text-align: center;
+  font-size: 14px;
+   animation: bounceIn 0.5s ease-out;
+}
+
+
+/* Application de l'animation sur le modal */
+.connect-modal-content {
+  animation: moveModal 0.3s ease forwards; /* animation de 0.3s, fin en 20px */
+}
+
+.connected-user button {
+    position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #ffa600;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.connect-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  display: none;
+}
+
+
+
+/* ====================================================================================================== */
+/* Market button */
+/* ====================================================================================================== */
+/* Styles pour le bouton fixé en bas à droite */
+.market-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px; 
+  height: 80px; 
+  background-color: #e69500; 
+  color: white;
+  border: none;
+  border-radius: 50%; 
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+}
+
+
+.cart-count {
+  position: absolute;
+  top: -10px; 
+  right: 30%; 
+  transform: translateX(50%); 
+  background: #b01b1b;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style du modal panier */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cart-modal-content {
+  background: radial-gradient(circle, rgb(28, 87, 6) 0%, rgb(44, 158, 43) 100%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Bouton de fermeture */
+.cart-modal-close {
+  background-color: #e69500;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.cart-modal-valid {
+  background-color: #ffffff;
+  color: #0ba500;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 35px;
+}
+
+/* Liste des articles du panier : afficher plusieurs articles sur une ligne */
+.cart-items2 {
+  list-style: none;
+  padding: 0;
+  margin: 0!important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Grille flexible */
+  gap: 10px; /* Espacement entre les articles */
+  justify-content: center;
+
+}
+
+/* Article individuel dans le panier */
+.cart-item2 {
+  color: #bdbdbd;
+  display: flex;
+  flex-direction: column; /* Image au-dessus du texte */
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  text-align: center;
+  height: 80px;
+  margin-top: 10px;
+}
+
+/* Image de l'article */
+.cart-item-image {
+  width: 80px; /* Agrandir l'image */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Texte sous l'image */
+.cart-item-details {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* ====================================================================================================== */
+/* Animation */
+/* ====================================================================================================== */
+@keyframes moveModal {
+  0% {
+    transform: translateY(0); /* Point de départ, pas de mouvement */
+  }
+  100% {
+    transform: opacity(0); /* Point d'arrivée, déplacement de 20px */
+  }
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInReverse {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(25%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }   
+  100% {
+    transform: translateX(0%);
+  }
+}

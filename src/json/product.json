@@ -1,0 +1,112 @@
+[
+  {
+    "_id": "65d1234567890abcdef00001",
+    "name": "Whooper",
+    "description": "Craquez pour LE mythe. Une viande de bœuf grillée à la flamme, une sauce onctueuse, des tomates fraîches, une salade croquante, des cornichons et des oignons.",
+    "price": 15.99,
+    "category": "plat",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:15:30.000Z",
+    "updatedAt": "2025-02-20T10:15:30.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00002",
+    "name": "Doooble whoopper",
+    "description": "Découvrez une nouvelle dimension. Deux viandes de bœuf grillées à la flamme, des tranches de cheddar fondu et tous les ingrédients du WHOPPER®",
+    "price": 18.50,
+    "category": "plat",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:20:00.000Z",
+    "updatedAt": "2025-02-20T10:20:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00003",
+    "name": "BIG KING XXL",
+    "description": "Deux viandes de bœuf grillées à la flamme, de la sauce BIG KING® et des tranches de cheddar fondu. Une icône taille XXL.",
+    "price": 13.90,
+    "category": "plat",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:25:00.000Z",
+    "updatedAt": "2025-02-20T10:25:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00004",
+    "name": "Donut Chocolat Noisette",
+    "description": "Ne résistez plus à ce délicieux donut parfum chocolat avec ses éclats de noisettes ! Produit décongelé, ne pas recongeler.",
+    "price": 6.50,
+    "category": "dessert",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:30:00.000Z",
+    "updatedAt": "2025-02-20T10:30:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00005",
+    "name": "Cookie Duo Chocolat",
+    "description": "Découvrez notre délicieux cookie aux pépites de chocolat au lait et chocolat noir. Produit décongelé, ne pas recongeler.",
+    "price": 5.90,
+    "category": "dessert",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:35:00.000Z",
+    "updatedAt": "2025-02-20T10:35:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00006",
+    "name": "Muffin Chocolat Noisette",
+    "description": "Goûtez à ce muffin moelleux au chocolat, aux pépites de chocolat et au cœur coulant chocolat noisette ! Produit décongelé, ne pas recongeler.",
+    "price": 5.50,
+    "category": "dessert",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:40:00.000Z",
+    "updatedAt": "2025-02-20T10:40:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00007",
+    "name": "Fuze Tea Pêche Hibiscus",
+    "description": "Avec Fuze Tea, dégustez une savoureuse et unique fusion de saveurs délicieusement rafraîchissantes",
+    "price": 4.90,
+    "category": "boisson",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:45:00.000Z",
+    "updatedAt": "2025-02-20T10:45:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00008",
+    "name": "Coca-Cola®",
+    "description": "Etanche ta soif avec un Coca-Cola® !",
+    "price": 3.50,
+    "category": "boisson",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:50:00.000Z",
+    "updatedAt": "2025-02-20T10:50:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00009",
+    "name": "Fanta® Goût Original sans sucres",
+    "description": "Profitez du goût fruité et rafraichissant de Fanta Orange, avec zéro sucres ajoutés.",
+    "price": 2.50,
+    "category": "boisson",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T10:55:00.000Z",
+    "updatedAt": "2025-02-20T10:55:00.000Z"
+  },
+  {
+    "_id": "65d1234567890abcdef00010",
+    "name": "Vittel®",
+    "description": "Vittel® (50cl)",
+    "price": 4.20,
+    "category": "boisson",
+    "restaurant": "65d5432167890abcdef54321",
+    "promotions": [],
+    "createdAt": "2025-02-20T11:00:00.000Z",
+    "updatedAt": "2025-02-20T11:00:00.000Z"
+  }
+]
