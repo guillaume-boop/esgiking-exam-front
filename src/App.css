@@ -449,7 +449,7 @@ body.connect-modal-open {
   border-radius: 8px;
   font-size: 12px;
   text-align: center;
-  height: 80px;
+  height: 80px!important;
   margin-top: 10px;
 }
 
@@ -469,6 +469,100 @@ body.connect-modal-open {
 }
 
 
+/* ====================================================================================================== */
+/* Menu Modal */
+/* ====================================================================================================== */
+/* Overlay du modal (fond assombri) */
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenu du modal */
+.menu-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Liste des plats et boissons */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Chaque élément du menu */
+.menu-item {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  background-color: #f4f4f4;
+}
+
+/* Titre et sections */
+.menu-modal-content h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.menu-modal-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Boutons */
+.menu-validate {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.menu-validate:hover {
+  background-color: darkgreen;
+}
+
+.menu-close {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.menu-close:hover {
+  background-color: darkred;
+}
 
 
 

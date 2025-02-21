@@ -1,26 +1,48 @@
 import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "./CartContext";
+import { useUser } from "./UserContext";
+
 
 const MarketButton: React.FC = () => {
   const { cart } = useCart();
+  const { user } = useUser(); // Récupérer l'utilisateur connecté
   const [isModalOpen, setIsModalOpen] = useState(false);
-   const totalPrice = cart.reduce((sum, product) => sum + (product.price || 0), 0);
 
-    // Fonction pour valider la commande
+  // Calcul du total du panier
+  const totalPrice = cart.reduce((sum, product) => sum + (product.price || 0), 0);
+
+  // Fonction pour valider la commande
   const handleValidation = () => {
-    // Création du message d'alerte
+
+
     const productsList = cart.map((product) => `- ${product.name} : ${product.price ? product.price.toFixed(2) + "€" : "Prix non disponible"}`).join("\n");
-    
-    alert(
+
+    if (!user) {
+
+      alert(
       `Commande enregistrée\n\n` +
-      `ID du user : undefined}\n` +
+      `ID du user : 00000000\n` +
+      `Nom : invite\n` +
       `Promotion : Non\n\n` +
       `Produits dans la commande :\n${productsList}\n\n` +
       `Total : ${totalPrice.toFixed(2)} €`
     );
-    
-    window.location.reload();
+      window.location.reload(); 
+      return;
+    }
+
+
+    alert(
+      `Commande enregistrée\n\n` +
+      `ID du user : ${user.id}\n` +
+      `Nom : ${user.firstName} ${user.lastName}\n` +
+      `Promotion : Non\n\n` +
+      `Produits dans la commande :\n${productsList}\n\n` +
+      `Total : ${totalPrice.toFixed(2)} €`
+    );
+
+    window.location.reload(); // Refresh après validation
   };
 
   return (
@@ -31,7 +53,7 @@ const MarketButton: React.FC = () => {
       </button>
 
       {isModalOpen && (
-        <div className="cart-modal-overlay">
+         <div className="cart-modal-overlay">
           <div className="cart-modal-content">
             <h2>Votre Panier</h2>
             <div className="cart-total">
